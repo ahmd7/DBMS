@@ -1,15 +1,6 @@
 #!/bin/bash
 clear
 
-echo -e "\t\t\t\t  _____    ____    __  __    _____ "
-echo -e "\t\t\t\t |  __ \  |  _ \  |  \/  |  / ____|"
-echo -e "\t\t\t\t | |  | | | |_) | | \  / | | (___  "
-echo -e "\t\t\t\t | |  | | |  _ <  | |\/| |  \___ \ "
-echo -e "\t\t\t\t | |__| | | |_) | | |  | |  ____) |"
-echo -e "\t\t\t\t |_____/  |____/  |_|  |_| |_____/ "
-echo -e "\t\t\t\t                                   "
-echo -e "\t\t\t\t                                   "
-
 
 check_name (){
 if [ -z "$NAME" ]; then
@@ -24,15 +15,23 @@ else
 	return 1
 fi	
 }
- 
 
-echo -e "################################"
-echo -e "# Choose What You Want[1]      #"
-echo -e "# 1. Create Database           #"
-echo -e "# 2. List Databases            #"
-echo -e "# 3. Connect To Database       #"
-echo -e "# 4. Drop Database             #"
-echo -e "################################"
+echo -e "\t\t\t\t  _____    ____    __  __    _____ "
+echo -e "\t\t\t\t |  __ \  |  _ \  |  \/  |  / ____|"
+echo -e "\t\t\t\t | |  | | | |_) | | \  / | | (___  "
+echo -e "\t\t\t\t | |  | | |  _ <  | |\/| |  \___ \ "
+echo -e "\t\t\t\t | |__| | | |_) | | |  | |  ____) |"
+echo -e "\t\t\t\t |_____/  |____/  |_|  |_| |_____/ "
+echo -e "\t\t\t\t                                   "
+echo -e "\t\t\t\t                                   " 
+
+echo -e "##################################"
+echo -e "# Choose What You Want[ 1 - 4 ]  #"
+echo -e "# 1. Create Database             #"
+echo -e "# 2. List Databases              #"
+echo -e "# 3. Connect To Database         #"
+echo -e "# 4. Drop Database               #"
+echo -e "##################################"
 while :
 do
 echo "Enter a number:" && read main
