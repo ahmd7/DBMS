@@ -49,7 +49,13 @@ if [ $main == 1 ]; then
 elif [ $main == 2 ]; then
         ls ~/dbs/ | awk '{print $1}'
 elif [ $main == 3 ]; then
-        ./connect.sh
+	echo "Enter database name:" && read db
+	if [ -d ~/dbs/$db ] ; then
+		echo "Connecting to $db ..."
+                ./connect.sh $db
+        else
+                echo "The Database $NAME Doesn't Exist"
+	fi
 elif [ $main == 4 ]; then
         echo "Enter The Database Name:" && read NAME
         if [ -d ~/dbs/$NAME ] ; then
